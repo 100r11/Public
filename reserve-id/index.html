@@ -10,9 +10,6 @@
 <meta name="apple-mobile-web-app-title" content="Резерв ID">
 <link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADA0lEQVR4nO3dS47TWhRA0SrEPIBRvBYjYLyMgBazosvLZQMFhe/Ha/UjWdbO8YmVOM/vP7x7gh95M/sAWJc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4/ufrl8+zD2Ehzx779BRN/Pfx0/VHspRbx/Gbc+K2ldw0jj+4fNwwkXvF8SorxX0quUUc/2jNPL6Sk+O47KPHqZUcGMfEj6OHVXJUHIvcpTgmkRPiWKSJ0e6VbBzHsk2MNq1kvzg2amK0VyXbxLF1E6MtKtkgjsOy+N7iiawbx8FNjNasZLk4btXEaKlKVonj5k2MVqhkchya+KWJlUyLQxYvMiWRq+PQxF+6spKL4tDEq7ugEl8wJomDJA6SOEjiIImDJA6SOEjiIL2dfQCreLjh6Jbuk8nBT4iDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDdOwjGP7yGa4vffmRj2wwOUjiIImDJA7SsQvpSzdEzwQbmRwkcZDEQRIHSRyki+JY4V9ST3LN+TQ5SOIgiYN0XRzWjtdy2Zk0OUjiIIljM1denS+Nw9qxF5ODJI6dXDx6xUG6Og5rx0ZMDpI4tnH90J0QhyvLLkwO0rE/TXipxX+LMGXcmhykOXFYO7ZgcpDEsYFZg1YcpGlxWDvWZ3KsbuK7SBwkcZBmxmHt+KW5p8jkIImDJA7S5DisHT8x/eSYHKTn9x/ezT6GR4t/teIfmT4nRivGMTovlwVTGO0Rx2i7XLao4cGucYyWymXHFEbnxPHgylbOSGF0bByj18rl1BRGN4pj9Ju53KeGB7eOY/T1y+fbpjASB8kdUpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYP0DSy+f0KB+jNiAAAAAElFTkSuQmCC">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --phone-width: 430px;
@@ -31,7 +28,7 @@
   body {
     margin: 0;
     padding: 24px;
-    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
     background: #DDD8C9;
     display: flex;
     align-items: center;
@@ -71,7 +68,8 @@
     background: var(--ticker-bg);
     color: var(--ticker-text);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: -.1px;
     padding: 10px 0;
     white-space: nowrap;
   }
@@ -110,14 +108,14 @@
         <path d="M12 22 H22"/>
       </g>
     </svg>
-    <div style="font-size: 27px; font-weight: 800; line-height: 1.35; letter-spacing: .3px;">Міністерство<br>оборони<br>України</div>
+    <div style="font-size: 26px; font-weight: 700; line-height: 1.28; letter-spacing: -.35px;">Міністерство<br>оборони<br>України</div>
   </div>
 </div>
 
 <div class="screen" id="main">
   <div class="safe-top"></div>
   <div style="padding: 12px 24px 0 24px; display: flex; justify-content: flex-end;">
-    <button style="height: 46px; padding: 0 18px; border: none; border-radius: 23px; background: var(--button-bg); box-shadow: 0 2px 8px rgba(0,0,0,.08); font-size: 15px; font-weight: 700; color: var(--accent-dark); display: flex; align-items: center; gap: 10px; cursor: pointer;">
+    <button style="height: 46px; padding: 0 18px; border: none; border-radius: 23px; background: var(--button-bg); box-shadow: 0 2px 8px rgba(0,0,0,.08); font-size: 16px; font-weight: 400; letter-spacing: -.2px; color: var(--accent-dark); display: flex; align-items: center; gap: 10px; cursor: pointer;">
       Сповіщення
       <svg width="17" height="18" viewBox="0 0 20 21" fill="none" stroke="#1A1B18" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
         <path d="M10 2.5a5.5 5.5 0 0 0-5.5 5.5v3.2L2.8 14a1.2 1.2 0 0 0 1 1.9h12.4a1.2 1.2 0 0 0 1-1.9l-1.7-2.8V8a5.5 5.5 0 0 0-5.5-5.5z"/>
@@ -126,11 +124,11 @@
     </button>
   </div>
 
-  <div style="padding: 98px 18px 0 18px; flex-grow: 1; display: flex; flex-direction: column;">
+  <div style="padding: 88px 18px 0 18px; flex-grow: 1; display: flex; flex-direction: column;">
     <div style="background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: 16px; overflow: hidden; position: relative;">
-      <div style="padding: 26px 24px 118px 24px;">
+      <div style="padding: 28px 22px 170px 22px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 18px;">
-          <div style="font-size: 23px; font-weight: 800; color: var(--accent-dark);">Резерв ID</div>
+          <div style="font-size: 22px; font-weight: 500; letter-spacing: -.35px; color: var(--accent-dark);">Резерв ID</div>
           <svg width="44" height="54" viewBox="0 0 34 42" fill="none" aria-hidden="true" style="flex-shrink: 0;">
             <path d="M17 1 L32 6 V20 C32 31 25 38 17 41 C9 38 2 31 2 20 V6 Z" fill="#1A1B18"/>
             <g stroke="#E2DCCB" stroke-width="2.4" stroke-linecap="round">
@@ -142,14 +140,14 @@
           </svg>
         </div>
 
-        <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 6px;">
-          <div style="font-size: 15px; font-weight: 500; color: var(--accent-muted);">Дата народження:</div>
-          <div style="font-size: 19px; font-weight: 700; color: var(--accent-dark);">27.01.1992</div>
+        <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-size: 16px; font-weight: 400; letter-spacing: -.15px; color: var(--accent-muted);">Дата народження:</div>
+          <div style="font-size: 18px; font-weight: 500; letter-spacing: -.25px; color: var(--accent-dark);">27.01.1992</div>
         </div>
 
         <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 6px;">
-          <div style="font-size: 15px; font-weight: 500; color: var(--accent-muted);">Відстрочка до:</div>
-          <div style="font-size: 19px; font-weight: 700; color: var(--accent-dark);">завершення мобілізації</div>
+          <div style="font-size: 16px; font-weight: 400; letter-spacing: -.15px; color: var(--accent-muted);">Відстрочка до:</div>
+          <div style="font-size: 18px; font-weight: 500; letter-spacing: -.25px; color: var(--accent-dark);">завершення мобілізації</div>
         </div>
       </div>
 
@@ -166,28 +164,28 @@
         </div>
       </div>
 
-      <div style="padding: 28px 24px 30px 24px; position: relative; min-height: 168px;">
-        <div style="font-size: 14px; font-weight: 500; color: var(--accent-muted);">Військовозобов'язаний</div>
-        <div style="margin-top: 8px; font-size: 23px; font-weight: 800; line-height: 1.35; color: var(--accent-dark);">ГУСАКОВСЬКИЙ<br>Володимир<br>Анатолійович</div>
-        <button aria-label="Додати" style="position: absolute; right: 22px; bottom: 28px; width: 54px; height: 54px; border: none; border-radius: 50%; background: #E8851E; color: #fff; font-size: 30px; line-height: 1; font-weight: 500; cursor: pointer; box-shadow: 0 4px 10px rgba(232,133,30,.35);">+</button>
+      <div style="padding: 30px 22px 24px 22px; position: relative; min-height: 150px;">
+        <div style="font-size: 15px; font-weight: 400; letter-spacing: -.15px; color: var(--accent-muted);">Військовозобов'язаний</div>
+        <div style="margin-top: 8px; font-size: 22px; font-weight: 500; line-height: 1.24; letter-spacing: -.35px; color: var(--accent-dark);">ГУСАКОВСЬКИЙ<br>Володимир<br>Анатолійович</div>
+        <button aria-label="Додати" style="position: absolute; right: 20px; bottom: 22px; width: 50px; height: 50px; border: none; border-radius: 50%; background: #E8851E; color: #fff; font-size: 30px; line-height: 1; font-weight: 500; cursor: pointer; box-shadow: 0 4px 10px rgba(232,133,30,.35);">+</button>
       </div>
     </div>
   </div>
 
-  <nav style="margin: 0 18px 28px 18px; min-height: 82px; background: var(--button-bg); border-radius: 24px; box-shadow: 0 4px 14px rgba(0,0,0,.1); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 8px; gap: 2px;">
-    <a href="#" style="text-decoration: none; background: #E8E2D2; border-radius: 16px; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 700;">
+  <nav style="margin: 0 20px 24px 20px; min-height: 76px; background: var(--button-bg); border-radius: 28px; box-shadow: 0 4px 14px rgba(0,0,0,.1); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 8px; gap: 2px;">
+    <a href="#" style="text-decoration: none; background: #E8E2D2; border-radius: 16px; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 400;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"></rect><circle cx="8.5" cy="11" r="2.2"></circle><path d="M5.5 16.5c.7-1.8 2-2.6 3-2.6s2.3.8 3 2.6M14 9.5h5M14 13h5M14 16.5h3"></path></svg>
       Резерв ID
     </a>
-    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 600;">
+    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 400;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"></rect></svg>
       Сервіси
     </a>
-    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 600;">
+    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 400;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="13" rx="2.5"></rect><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5M3 12.5h18"></path></svg>
       Вакансії
     </a>
-    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 600;">
+    <a href="#" style="text-decoration: none; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 400;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
       Меню
     </a>
