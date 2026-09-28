@@ -4,12 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Резерв ID</title>
-<meta name="theme-color" content="#E7E2D2">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Резерв ID">
-<link rel="manifest" href="./manifest.json">
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADA0lEQVR4nO3dS47TWhRA0SrEPIBRvBYjYLyMgBazosvLZQMFhe/Ha/UjWdbO8YmVOM/vP7x7gh95M/sAWJc4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4/ufrl8+zD2Ehzx779BRN/Pfx0/VHspRbx/Gbc+K2ldw0jj+4fNwwkXvF8SorxX0quUUc/2jNPL6Sk+O47KPHqZUcGMfEj6OHVXJUHIvcpTgmkRPiWKSJ0e6VbBzHsk2MNq1kvzg2amK0VyXbxLF1E6MtKtkgjsOy+N7iiawbx8FNjNasZLk4btXEaKlKVonj5k2MVqhkchya+KWJlUyLQxYvMiWRq+PQxF+6spKL4tDEq7ugEl8wJomDJA6SOEjiIImDJA6SOEjiIL2dfQCreLjh6Jbuk8nBT4iDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDJA6SOEjiIImDdOwjGP7yGa4vffmRj2wwOUjiIImDJA7SsQvpSzdEzwQbmRwkcZDEQRIHSRyki+JY4V9ST3LN+TQ5SOIgiYN0XRzWjtdy2Zk0OUjiIIljM1denS+Nw9qxF5ODJI6dXDx6xUG6Og5rx0ZMDpI4tnH90J0QhyvLLkwO0rE/TXipxX+LMGXcmhykOXFYO7ZgcpDEsYFZg1YcpGlxWDvWZ3KsbuK7SBwkcZBmxmHt+KW5p8jkIImDJA7S5DisHT8x/eSYHKTn9x/ezT6GR4t/teIfmT4nRivGMTovlwVTGO0Rx2i7XLao4cGucYyWymXHFEbnxPHgylbOSGF0bByj18rl1BRGN4pj9Ju53KeGB7eOY/T1y+fbpjASB8kdUpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYP0DSy+f0KB+jNiAAAAAElFTkSuQmCC">
 <style>
   :root {
     --phone-width: 430px;
@@ -23,6 +17,7 @@
     --ticker-text: #F1ECDF;
     --button-bg: #FBF9F2;
   }
+
   * { box-sizing: border-box; }
   html, body { height: 100%; }
   body {
@@ -35,8 +30,10 @@
     justify-content: center;
     min-height: 100vh;
   }
+
   button, a { font-family: inherit; }
   button:active { transform: scale(.97); }
+
   .screen {
     width: var(--phone-width);
     height: var(--phone-height);
@@ -45,6 +42,7 @@
     border-radius: 34px;
     box-shadow: 0 24px 60px rgba(0,0,0,.25);
   }
+
   #splash {
     background: #20211F;
     color: #E9E4D4;
@@ -53,7 +51,12 @@
     position: absolute;
     inset: 0;
   }
-  #splash.hidden { opacity: 0; pointer-events: none; }
+
+  #splash.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   #main {
     background: var(--screen-bg);
     color: var(--accent-dark);
@@ -62,40 +65,66 @@
     display: flex;
     flex-direction: column;
   }
-  .safe-top { height: 52px; flex-shrink: 0; }
+
+  .safe-top {
+    height: 52px;
+    flex-shrink: 0;
+  }
+
   .ticker {
     overflow: hidden;
     background: var(--ticker-bg);
     color: var(--ticker-text);
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -.1px;
+    font-weight: 600;
     padding: 10px 0;
     white-space: nowrap;
   }
+
   .ticker-track {
     display: flex;
     width: max-content;
     animation: ticker-scroll 12s linear infinite;
     will-change: transform;
   }
-  .ticker-group { display: flex; flex-shrink: 0; }
-  .ticker-item { padding-right: 28px; }
+
+  .ticker-group {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .ticker-item {
+    padding-right: 28px;
+  }
+
   @keyframes ticker-scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+
   @media (prefers-reduced-motion: reduce) {
     .ticker-track { animation: none; }
   }
+
   @media (max-width: 460px) {
-    body { padding: 0; background: var(--screen-bg); }
-    .screen { width: 100vw; height: 100vh; border-radius: 0; box-shadow: none; }
+    body {
+      padding: 0;
+      background: var(--screen-bg);
+    }
+
+    .screen {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      box-shadow: none;
+    }
   }
 </style>
 <base target="_blank">
 </head>
 <body>
+
+<!-- ===== ЗАСТАВКА ===== -->
 <div class="screen" id="splash" onclick="goMain()">
   <div class="safe-top"></div>
   <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding: 0 32px; text-align: center;">
@@ -108,12 +137,14 @@
         <path d="M12 22 H22"/>
       </g>
     </svg>
-    <div style="font-size: 26px; font-weight: 700; line-height: 1.28; letter-spacing: -.35px;">Міністерство<br>оборони<br>України</div>
+    <div style="font-size: 26px; font-weight: 700; line-height: 1.28; letter-spacing: -.35px; letter-spacing: .3px;">Міністерство<br>оборони<br>України</div>
   </div>
 </div>
 
+<!-- ===== ГОЛОВНИЙ ЕКРАН ===== -->
 <div class="screen" id="main">
   <div class="safe-top"></div>
+
   <div style="padding: 12px 24px 0 24px; display: flex; justify-content: flex-end;">
     <button style="height: 46px; padding: 0 18px; border: none; border-radius: 23px; background: var(--button-bg); box-shadow: 0 2px 8px rgba(0,0,0,.08); font-size: 16px; font-weight: 400; letter-spacing: -.2px; color: var(--accent-dark); display: flex; align-items: center; gap: 10px; cursor: pointer;">
       Сповіщення
@@ -126,13 +157,18 @@
 
   <div style="padding: 88px 18px 0 18px; flex-grow: 1; display: flex; flex-direction: column;">
     <div style="background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: 16px; overflow: hidden; position: relative;">
+
       <div style="padding: 28px 22px 170px 22px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 18px;">
           <div style="font-size: 22px; font-weight: 500; letter-spacing: -.35px; color: var(--accent-dark);">Резерв ID</div>
-          <svg width="42" height="50" viewBox="0 0 42 50" fill="none" aria-hidden="true" style="flex-shrink:0;">
-            <path d="M3 2.5H39V23.2C39 34.7 31.9 43.3 21 48C10.1 43.3 3 34.7 3 23.2V2.5Z" fill="#11110F"/>
-            <path d="M20.9 9.1C19.2 11.5 17.8 13.8 17.1 16.6C16.6 18.7 16.5 21 16.5 23.3V30.5C15.3 29.4 14 28.1 13.1 26.6C11.9 24.7 11.5 22.5 11.4 20.3L11.2 12.2L7.5 10.8L8 22.8C8.1 27.4 10.1 31.7 13.6 34.6C15 35.8 16.4 36.8 17.8 37.7V41.2L21 43.1L24.2 41.2V37.7C25.6 36.8 27 35.8 28.4 34.6C31.9 31.7 33.9 27.4 34 22.8L34.5 10.8L30.8 12.2L30.6 20.3C30.5 22.5 30.1 24.7 28.9 26.6C28 28.1 26.7 29.4 25.5 30.5V23.3C25.5 21 25.4 18.7 24.9 16.6C24.2 13.8 22.8 11.5 21.1 9.1L21 8.9L20.9 9.1Z" fill="#E7E2D2"/>
-            <path d="M18.3 19.3L21 15.7L23.7 19.3V32.9L21 34.6L18.3 32.9V19.3Z" fill="#E7E2D2"/>
+          <svg width="44" height="54" viewBox="0 0 34 42" fill="none" aria-hidden="true" style="flex-shrink: 0;">
+            <path d="M17 1 L32 6 V20 C32 31 25 38 17 41 C9 38 2 31 2 20 V6 Z" fill="#1A1B18"/>
+            <g stroke="#E2DCCB" stroke-width="2.4" stroke-linecap="round">
+              <path d="M17 10 V31"/>
+              <path d="M17 14 C12 14 10 11 10 8"/>
+              <path d="M17 14 C22 14 24 11 24 8"/>
+              <path d="M12 22 H22"/>
+            </g>
           </svg>
         </div>
 
@@ -163,11 +199,13 @@
       <div style="padding: 30px 22px 24px 22px; position: relative; min-height: 150px;">
         <div style="font-size: 15px; font-weight: 400; letter-spacing: -.15px; color: var(--accent-muted);">Військовозобов'язаний</div>
         <div style="margin-top: 8px; font-size: 22px; font-weight: 500; line-height: 1.24; letter-spacing: -.35px; color: var(--accent-dark);">ГУСАКОВСЬКИЙ<br>Володимир<br>Анатолійович</div>
-        <button aria-label="Додати" style="position: absolute; right: 20px; bottom: 22px; width: 50px; height: 50px; border: none; border-radius: 50%; background: #E8851E; color: #fff; font-size: 30px; line-height: 1; font-weight: 500; cursor: pointer; box-shadow: 0 4px 10px rgba(232,133,30,.35);">+</button>
+        <button aria-label="Додати" style="position: absolute; right: 20px; bottom: 22px; width: 50px; height: 50px; border: none; border-radius: 50%; background: #FF9500; color: #11110F; font-size: 30px; line-height: 1; font-weight: 700; cursor: pointer; box-shadow: 0 4px 10px rgba(255,149,0,.28);">+</button>
       </div>
+
     </div>
   </div>
 
+  <!-- Нижня навігація -->
   <nav style="margin: 0 20px 24px 20px; min-height: 76px; background: var(--button-bg); border-radius: 28px; box-shadow: 0 4px 14px rgba(0,0,0,.1); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 8px; gap: 2px;">
     <a href="#" style="text-decoration: none; background: #E8E2D2; border-radius: 16px; color: var(--accent-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 400;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"></rect><circle cx="8.5" cy="11" r="2.2"></circle><path d="M5.5 16.5c.7-1.8 2-2.6 3-2.6s2.3.8 3 2.6M14 9.5h5M14 13h5M14 16.5h3"></path></svg>
@@ -192,13 +230,9 @@
   function goMain() {
     document.getElementById('splash').classList.add('hidden');
   }
-  setTimeout(goMain, 2200);
 
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js').catch(() => {});
-    });
-  }
+  setTimeout(goMain, 2200);
 </script>
+
 </body>
 </html>
